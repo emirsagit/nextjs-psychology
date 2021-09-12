@@ -1,43 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-
-html,
-body {
-  font-family: "Ubuntu", sans-serif;
-  background-color: #fff;
-  color: #222;
-  font-weight: 200;
-  height: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+:root {
+  --font-primary: "Open Sans", sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+  --dark-color-primary: #324259;
+  --dark-color-secondary: #a78564;
+  --light-color-primary: #ded0c2;
+  --light-color-secondary: #f5f1ed;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 3rem;
+  --section-padding-y: 3rem;
+  --section-width: 90%;
 }
 
-#__next {
+html, body {
+  font-family: var(--font-primary);
+  background-color: var(--light-color-secondary);
+  color: var(--dark-color-primary);
+  font-weight: 400;
   height: 100%;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+  font-family: var(--font-secondary);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+h1, .h1 {
+  font-size: var(--text-2xl);
+}
+
+h2, .h2 {
+  font-size: var(--text-xl);
+}
+
+h3, .h3 {
+  font-size: var(--text-lg);
 }
 
 a {
-  color: #9b9b9b;
+  color: var(--dark-color-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:active,
-a:hover {
-  color: #000;
+a:active, a:hover {
+  color: var(--dark-color-secondary);
 }
 
-.youtube-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  margin-bottom: 50px;
-}
-
-.youtube-container iframe {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }

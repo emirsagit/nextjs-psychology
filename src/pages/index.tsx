@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
@@ -12,6 +12,7 @@ export default function Index() {
       <TwitterCardMeta url={"/"} />
       <div className="container">
         <div>
+          <img src="/images/hand.png" alt="hand" />
           <h1>
             Hi, We're Next.js & Netlify<span className="fancy">.</span>
           </h1>
@@ -26,7 +27,10 @@ export default function Index() {
           align-items: center;
           justify-content: center;
           flex: 1 1 auto;
-          padding: 0 1.5rem;
+        }
+        img {
+          filter: drop-shadow(-2px 24px 12px rgba(17, 12, 46, 0.3)) drop-shadow(-2px 24px 100px rgba(17, 12, 46, 0.2));
+          width: 50%;
         }
         h1 {
           font-size: 2.5rem;
