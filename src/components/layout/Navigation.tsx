@@ -49,25 +49,28 @@ export default function Navigation() {
             left: 0;
             right: 0;
             bottom: 0;
+            display: none;
             opacity: 0;
+            z-index: 1;
           }
           ul {
             width: 100%;
+            position: absolute;
             text-align: left;
             list-style: none;
             margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            z-index: 1;
             transform: translateY(100%);
             transition: opacity 200ms;
             width: var(--section-width);
           }
           .active {
-            opacity: 1;
+            display: flex;
             transform: translateY(0);
             color: var(--light-color-secondary);
+            opacity: 1;
           }
           li {
             margin-bottom: 1.75rem;
@@ -87,6 +90,7 @@ export default function Navigation() {
           @media (min-width: 769px) {
             .container {
               opacity: 1;
+              display: flex;
               position: static;
               width: 60%;
               background-color: var(--light-color-secondary);
@@ -109,9 +113,10 @@ export default function Navigation() {
               opacity: 100%;
             }
             ul {
+              justify-content: flex-end;
               flex-direction: row;
               transform: translateY(0);
-              display: flex;
+              position: static;
             }
             li {
               font-size: 1rem;
