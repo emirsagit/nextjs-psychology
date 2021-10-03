@@ -1,25 +1,56 @@
-import Layout from "../components/layout/Layout";
-import Title from "../components/title/Title";
-import BasicMeta from "../components/meta/BasicMeta";
-import OpenGraphMeta from "../components/meta/OpenGraphMeta";
-import TwitterCardMeta from "../components/meta/TwitterCardMeta";
-import { SocialList } from "../components/SocialList";
+import { GetStaticProps } from "next";
+import {
+  Layout,
+  OpenGraphMeta,
+  BasicMeta,
+  TwitterCardMeta,
+  Resume,
+  Services,
+  HomePostList,
+} from "../components/index";
 
-export default function Index() {
+import { countPosts, listPostContent, PostContent } from "../lib/posts";
+import { listTags, TagContent } from "../lib/tags";
+import config from "../lib/config";
+
+type Props = {
+  posts: PostContent[];
+  tags: TagContent[];
+  pagination: {
+    current: number;
+    pages: number;
+    show: boolean;
+  };
+};
+
+export default function Index({ posts, tags, pagination }: Props) {
   return (
     <Layout>
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
-      <div className="container">
-        <Title />
-        {/* <SocialList /> */}
+      <div>
+        <Resume />
+        <Services />
+        <HomePostList posts={posts} tags={tags} pagination={pagination} />
       </div>
-      <style jsx>{`
-        .container {
-          display: flex;
-        }
-      `}</style>
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = listPostContent(1, 50);
+  const tags = listTags();
+  const pagination = {
+    current: 1,
+    pages: Math.ceil(countPosts() / config.posts_per_page),
+    show: false,
+  };
+  return {
+    props: {
+      posts,
+      tags,
+      pagination,
+    },
+  };
+};

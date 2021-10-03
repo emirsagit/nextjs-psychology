@@ -1,15 +1,14 @@
-import React from "react";
-
+import config from "../../lib/config";
 export default function Title() {
   return (
     <section>
-      <img src="/images/hand.png" alt="hand" />
+      <img src="/images/hand.png" alt="hand" width="1000" height="613" />
       <div className="text">
         <span className="handle">Yalnız Değilsiniz...</span>
         <h1>
           <span className="fancy">Klinik Psikolog</span>
           <br />
-          ÇAĞLA ŞENOL
+          {config.author}
         </h1>
       </div>
       <style jsx>{`
@@ -24,10 +23,12 @@ export default function Title() {
         }
         h1 {
           margin-top: 0;
+          text-transform: uppercase;
         }
         .fancy {
           font-weight: 200;
           font-family: var(--font-primary);
+          text-transform: capitalize;
         }
         .handle {
           display: inline-block;

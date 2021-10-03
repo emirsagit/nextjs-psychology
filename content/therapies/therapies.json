@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "recusandae-aliquam",
+    "seo_title": "recusandae aliquam",
+    "title": "Recusandae Aliquam",
+    "seo_description": "description",
+    "img1": "/images/therapies/img1.jpg",
+    "img2": "/images/therapies/img2.jpg",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam quasi aliquam eligendi, placeat qui corporis! uam cupiditate excepturi mollitia maiores labore suscipit quas Nulla placeat. Voluptatem quaerat non architecto ab laudantium modi minima sunt esse temporibus sint culpa,  aliquam numquam totam ratione voluptas quod exercitationem fuga. ",
+    "list_title": "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    "list": [
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor1",
+      "Lorem ipsum dolor2",
+      "Lorem ipsum dolor3",
+      "Lorem ipsum dolor4",
+      "Lorem ipsum dolor5",
+      "Lorem ipsum dolor6",
+      "Lorem ipsum dolor7"
+    ]
+  },
+  {
+    "slug": " dolor-sit",
+    "seo_title": "Dolor Sit",
+    "title": "Dolor Sit",
+    "seo_description": "description",
+    "img1": "/images/therapies/img1.jpg",
+    "img2": "/images/therapies/img2.jpg",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam quasi aliquam eligendi, placeat qui corporis! uam cupiditate excepturi mollitia maiores labore suscipit quas Nulla placeat. Voluptatem quaerat non architecto ab laudantium modi minima sunt esse temporibus sint culpa,  aliquam numquam totam ratione voluptas quod exercitationem fuga. ",
+    "list_title": "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    "list": [
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor"
+    ]
+  }
+]

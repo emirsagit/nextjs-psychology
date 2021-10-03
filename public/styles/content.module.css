@@ -1,67 +1,32 @@
 .content {
-  font-family: "Ubuntu", sans-serif;
-  color: #222;
-  font-weight: 200;
+  padding: 0 2rem;
 }
 
-.content time {
-  color: #9b9b9b;
-}
-
-.content p {
-  line-height: 1.5rem;
-  margin: 1.5rem 0 0 0;
+.content p, .content a, .content ul, .content ol, .content li, .content table, .content blockquote {
+  opacity: .9;
 }
 
 .content a {
-  color: blue;
+  color: var(--dark-color-secondary);
   text-decoration: underline;
 }
 
-.content h1 {
-  margin: 2.5rem 0 0 0;
+.content h1, .content h2, .content h3, .content h4 {
+  margin: 1em 0 .5em;
+  font-weight: 600;
+  font-family: var(--font-primary);
 }
 
-.content h2,
-.content h3,
-.content h4,
-.content h5 {
-  margin: 2rem 0 0 0;
-  line-height: 1.25em;
-}
-
-.content h2::before {
-  position: absolute;
-  margin-left: -1em;
-  font-weight: 300;
+.content h2 {
   font-size: 1.5rem;
-  color: #9b9b9b;
-  display: none;
-  content: "#";
 }
 
-.content pre {
-  display: block;
-  background-color: rgba(27, 31, 35, 0.05);
-  line-height: 1.25rem;
-  padding: 1rem;
-  overflow: auto;
-  margin: 1.75rem 0 0 0;
+.content h3 {
+  font-size: 1.33rem;
 }
 
-.content pre code {
-  background-color: transparent;
-  font-size: 100%;
-  padding: 0;
-}
-
-.content code {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 85%;
-  padding: 0.2em 0.4em;
-  margin: 0;
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px;
+.content h4 {
+  font-size: 1.25rem;
 }
 
 .content blockquote {
@@ -71,13 +36,12 @@
 .content blockquote::before {
   position: absolute;
   content: "\201C";
-  font-size: 6em;
-  font-family: roboto, serif;
-  line-height: 1.5rem;
+  font-size: 5em;
+  line-height: 1.7rem;
   margin-top: 0.1em;
-  margin-left: -0.2em;
+  margin-left: -0.3em;
   z-index: -1;
-  color: #ededed;
+  color: var(--dark-color-secondary);
 }
 
 .content table {
@@ -94,25 +58,21 @@
   font-weight: 500;
 }
 
-.content table th,
-.content table td {
+.content table th, .content table td {
   padding: 0.5em 1em;
   border: 1px double #eee;
 }
 
-.content ol,
-.content ul {
+.content ol, .content ul {
   padding: 0 0 0 1.5rem;
-  margin: 1.5rem 0 0 0;
+  margin: 0;
 }
 
-.content ol li,
-.content ul li {
-  line-height: 1.5rem;
+.content ol li, .content ul li {
+  margin-bottom: .3em;
 }
 
-.content li ol,
-.content li ul {
+.content li ol, .content li ul {
   margin: 0;
 }
 
@@ -129,13 +89,12 @@
 }
 
 @media (min-width: 769px) {
-  .content h2,
-  .content h3,
-  .content h4,
-  .content h5 {
+  .content {
+    padding: 0 6rem;
+  }
+  .content h2, .content h3, .content h4, .content h5 {
     position: relative;
   }
-
   .content h2::before {
     display: block;
   }

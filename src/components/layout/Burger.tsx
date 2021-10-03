@@ -1,11 +1,12 @@
-type Props = {
-  active: boolean;
-  onClick: () => void;
-};
-export default function Burger({ active, onClick }: Props) {
+import { NavigationContext } from "../../context/navigation";
+import { useContext } from "react";
+
+export default function Burger() {
+  const { active, burgerClick } = useContext(NavigationContext);
+
   const burgerColor = active ? "var(--light-color-secondary)" : "var(--dark-color-primary)";
   return (
-    <div className={"container " + (active ? "active" : "")} onClick={onClick}>
+    <div className={"container " + (active ? "active" : "")} onClick={() => burgerClick()}>
       <div className={"meat meat-1"} />
       <div className={"meat meat-2"} />
       <div className={"meat meat-3"} />
@@ -15,10 +16,13 @@ export default function Burger({ active, onClick }: Props) {
             width: 38px;
             height: 38px;
             cursor: pointer;
-            z-index: 2;
-            position: relative;
+            z-index: 4;
+            transition: 0.3s ease-in;
+            position: ${active ? "fixed" : "relative"};
             display: flex;
-            margin-left: auto;
+            margin-right: auto;
+            top: ${active ? "5%" : "0"};
+            left: ${active ? "55%" : "0"};
           }
           .meat {
             position: absolute;

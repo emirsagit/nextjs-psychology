@@ -1,19 +1,18 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Psikolog Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "instagram_account": "https://www.instagram.com/",
+  "youtube_account": "https://www.youtube.com/",
+  "facebook_account": "https://www.facebook.com/",
+  "twitter_account": "https://twitter.com/",
+  "site_title": "This is sample title",
+  "base_url": "",
   "site_keywords": [
     {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
+      "keyword": "Keyword"
     }
   ],
-  "posts_per_page": 5,
-  "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "site_description": "Site description",
+  "phone": "905555555555",
+  "author": "Emir Sağıt",
+  "email": "emirsagit@gmail.com",
+  "posts_per_page": 20
 }
