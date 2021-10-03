@@ -1,0 +1,10 @@
+export { default as Whatsapp } from "./Whatsapp";
+export { default as Instagram } from "./Instagram";
+export { default as InstagramTop } from "./top/InstagramTop";
+export { default as Twitter } from "./Twitter";
+export { default as Facebook } from "./Facebook";
+export { default as Youtube } from "./Youtube";
+export { default as MailWithNumberTop } from "./top/MailWithNumberTop";
+export { default as MailWithNumber } from "./MailWithNumber";
+export { default as PhoneWithNumber } from "./PhoneWithNumber";
+export { default as PhoneWithNumberTop } from "./top/PhoneWithNumberTop";

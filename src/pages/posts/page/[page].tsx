@@ -1,10 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import Layout from "../../../components/layout/Layout";
-import BasicMeta from "../../../components/meta/BasicMeta";
-import OpenGraphMeta from "../../../components/meta/OpenGraphMeta";
-import TwitterCardMeta from "../../../components/meta/TwitterCardMeta";
-import PostList from "../../../components/PostList";
+import { Layout, OpenGraphMeta, BasicMeta, TwitterCardMeta, BlogPostList } from "../../../components/index";
 import config from "../../../lib/config";
 import { countPosts, listPostContent, PostContent } from "../../../lib/posts";
 import { listTags, TagContent } from "../../../lib/tags";
@@ -16,17 +12,19 @@ type Props = {
   pagination: {
     current: number;
     pages: number;
+    show: boolean;
   };
 };
 export default function Page({ posts, tags, pagination, page }: Props) {
   const url = `/posts/page/${page}`;
-  const title = "All posts";
+  const title = "Makalelerim";
   return (
     <Layout>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
-      <PostList posts={posts} tags={tags} pagination={pagination} />
+      <h1 className="h1">Yazılarım</h1>
+      <BlogPostList posts={posts} tags={tags} pagination={pagination} />
     </Layout>
   );
 }
@@ -38,6 +36,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const pagination = {
     current: page,
     pages: Math.ceil(countPosts() / config.posts_per_page),
+    show: true,
   };
   return {
     props: {

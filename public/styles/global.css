@@ -1,17 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/LatoTR-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''), url('../fonts/LatoTR-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 200;
+  src: local(''), url('../fonts/LatoTR-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''), url('../fonts/LatoTR-Black.woff') format('woff');
+}
+
 :root {
-  --font-primary: "Open Sans", sans-serif;
-  --font-secondary: 'Playfair Display', serif;
-  --dark-color-primary: #324259;
-  --dark-color-secondary: #a78564;
+  --font-primary: 'Lato', sans-serif;
+  --font-secondary: 'Lato', sans-serif;
+  --dark-color-primary: #141414;
+  --dark-color-secondary: #e07a5f;
   --light-color-primary: #ded0c2;
-  --light-color-secondary: #f5f1ed;
-  --text-sm: 0.875rem;
+  --light-color-secondary: #e5e5e5;
+  --text-sm: 0.750rem;
   --text-md: 1rem;
   --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
-  --text-2xl: 2.3rem;
+  --text-xl: 1.7rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.2rem;
   --section-padding-y: 3rem;
   --padding-between-items: 1.5rem;
   --section-width: 90%;
@@ -23,22 +50,48 @@ html, body {
   color: var(--dark-color-primary);
   font-weight: 400;
   height: 100%;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 h1, h2, h3, .h1, .h2, .h3 {
   font-family: var(--font-secondary);
   line-height: 1.2;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: var(--text-3xl);
   font-weight: 900;
 }
 
-h1, .h1 {
-  font-size: var(--text-2xl);
-  letter-spacing: 1px;
+.global-therapy-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  text-align: center;
+  margin: 1em 0 .8em;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: var(--font-primary);
+}
+
+.h1 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  text-align: center;
+  margin: 1em 0 .8em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--font-primary);
 }
 
 h2, .h2 {
   font-size: var(--text-xl);
+  font-weight: 200;
 }
 
 h3, .h3 {
@@ -48,11 +101,10 @@ h3, .h3 {
 a {
   color: var(--dark-color-primary);
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-a:active, a:hover {
-  color: var(--dark-color-secondary);
+p {
+  opacity: .8;
 }
 
 img {
@@ -60,9 +112,28 @@ img {
   height: auto;
 }
 
+button, a {
+  user-select: none;
+}
+
+.bg-initial {
+  filter: drop-shadow(-2px 24px 12px rgba(17, 12, 46, 0.3)) drop-shadow(-2px 24px 100px rgba(17, 12, 46, 0.2));
+  margin-bottom: var(--padding-between-items);
+  width: 85%;
+}
+
+/* next image doesn't accept class */
+
+.meta-image {
+  border-radius: 25px;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
 @media (min-width: 500px) {
   :root {
     --text-2xl: 3rem;
+    --text-sm: 0.875rem;
   }
 }
 
@@ -71,7 +142,15 @@ img {
     --text-sm: 0.875rem;
     --text-md: 1.1rem;
     --text-lg: 1.33rem;
-    --text-xl: 1.7rem;
-    --text-2xl: 3.5rem;
+    --text-xl: 2rem;
+    --text-2xl: 3rem;
+    --text-3xl: 4rem;
+    --section-padding-y: 4rem;
+  }
+  .global-therapy-title {
+    font-size: var(--text-2xl);
+  }
+  .h1 {
+    font-size: var(--text-2xl);
   }
 }
