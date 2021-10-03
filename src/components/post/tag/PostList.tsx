@@ -21,8 +21,8 @@ export default function PostList({ posts, tags, tag, pagination }: Props) {
       current={pagination.current}
       pages={pagination.pages}
       link={{
-        href: () => "/yazilar/tags/[[...slug]]",
-        as: (page) => (page === 1 ? "/yazilar/tags/" + tag.slug : `/yazilar/tags/${tag.slug}/${page}`),
+        href: () => "/posts/tags/[[...slug]]",
+        as: (page) => (page === 1 ? "/posts/tags/" + tag.slug : `/posts/tags/${tag.slug}/${page}`),
       }}
     />
   ) : (
@@ -33,7 +33,7 @@ export default function PostList({ posts, tags, tag, pagination }: Props) {
     <section>
       <ul className="categories">
         <li>
-          <TagLink tag={{ slug: "tamamı", name: "Tamamı" }} active={false} />
+          <TagLink tag={{ slug: "all", name: "all" }} active={false} />
         </li>
         {tags.map((it, i) => (
           <li key={i}>
