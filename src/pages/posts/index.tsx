@@ -13,6 +13,7 @@ type Props = {
     show: boolean;
   };
 };
+
 export default function Index({ posts, tags, pagination }: Props) {
   const url = "/posts";
   const title = "Posts";

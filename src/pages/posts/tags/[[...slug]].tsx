@@ -3,7 +3,6 @@ import { Layout, OpenGraphMeta, BasicMeta, TwitterCardMeta, TagPostList } from "
 import config from "../../../lib/config";
 import { countPosts, listPostContent, PostContent } from "../../../lib/posts";
 import { getTag, listTags, TagContent } from "../../../lib/tags";
-import Head from "next/head";
 
 type Props = {
   posts: PostContent[];
@@ -16,13 +15,14 @@ type Props = {
     show: boolean;
   };
 };
+
 export default function Index({ posts, tags, tag, pagination, page }: Props) {
-  const url = `/yazilar/tags/${tag.name}` + (page ? `/${page}` : "");
+  const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
   const title = tag.name;
-  const description = `Özel ilgi alanı ${tag.name} olan Klinik Psikolog ${config.author}'un bu konuda yazdığı tüm yazılara ulaşabilirsiniz. `;
+  const description = "description";
   return (
     <Layout>
-      <h1 className="h1">Yazılarım</h1>
+      <h1 className="h1">Posts</h1>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
