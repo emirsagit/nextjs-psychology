@@ -3,7 +3,6 @@ import { Layout, OpenGraphMeta, BasicMeta, TwitterCardMeta, TagPostList } from "
 import config from "../../../lib/config";
 import { countPosts, listPostContent, PostContent } from "../../../lib/posts";
 import { getTag, listTags, TagContent } from "../../../lib/tags";
-import Head from "next/head";
 
 type Props = {
   posts: PostContent[];
@@ -16,6 +15,7 @@ type Props = {
     show: boolean;
   };
 };
+
 export default function Index({ posts, tags, tag, pagination, page }: Props) {
   const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
   const title = tag.name;
